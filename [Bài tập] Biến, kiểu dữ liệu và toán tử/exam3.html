@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diện tích hình tròn</title>
+  </head>
+  <body>
+    <input type="number" placeholder="Nhập bán kính (R)" id="r" />
+    <button onclick="S()">Nhập</button>
+    <p id="result"></p>
+    <script>
+      function S() {
+        let bkr = document.getElementById("r").value;
+        const pi = 3.14;
+        let dtS = bkr * bkr * pi;
+        document.getElementById("result").innerHTML =
+          "Diện tích hình tròn là: " + dtS;
+      }
+    </script>
+  </body>
+</html>
