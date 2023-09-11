@@ -6,11 +6,12 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="messageDiv"></div>
+    <button type="button" onclick="showmessage();">Click Me!</button>
     <script>
-      var width = 10;
-      var height = 5;
-      var area = width * height;
-      document.write("area = " + area);
+      function showmessage() {
+        document.getElementById("messageDiv").innerHTML = "Xin Chào!";
+      }
     </script>
   </body>
 </html>

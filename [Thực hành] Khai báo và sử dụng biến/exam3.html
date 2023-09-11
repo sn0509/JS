@@ -6,11 +6,14 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="messageDiv"></div>
-    <button type="button" onclick="showmessage();">Click Me!</button>
+    <button type="button" onclick="ShowMessage();">Try it!</button>
     <script>
-      function showmessage() {
-        document.getElementById("messageDiv").innerHTML = "Xin Chào!";
+      function ShowMessage() {
+        let first = prompt("Nhập a");
+        let second = prompt("Nhập b");
+        let multiples = first % second;
+        let compare = multiples == 0;
+        alert("a is multiples = " + compare);
       }
     </script>
   </body>
