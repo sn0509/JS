@@ -6,10 +6,11 @@
     <title>Document</title>
   </head>
   <body>
-    <button type="button" onclick="showMessage();">Click me!</button>
+    <div id="messageDiv"></div>
+    <button type="button" onclick="showmessage();">Click Me!</button>
     <script>
-      function showMessage() {
-        alert("Xin chào");
+      function showmessage() {
+        document.getElementById("messageDiv").innerHTML = "Xin Chào!";
       }
     </script>
   </body>
