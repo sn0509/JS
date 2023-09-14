@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính thuế thu nhập cá nhân</title>
+  </head>
+  <body>
+    <input
+      type="number"
+      id="salary"
+      placeholder="Nhập mức thu nhập hàng tháng của bạn"
+    /><br /><br />
+    <input type="button" onclick="check()" value="Kiểm tra" /><br /><br />
+    <span id="result"></span>
+    <script>
+      function check() {
+        let salary = +document.getElementById("salary").value;
+        let result;
+        let tax;
+        if (salary <= 5000000) {
+          tax = (salary / 100) * 5;
+        } else if (5000000 < salary <= 10000000) {
+          tax = (salary / 100) * 10 - 250000;
+        } else if (10000000 < salary <= 18000000) {
+          tax = (salary / 100) * 15 - 750000;
+        } else if (18000000 < salary <= 320000000) {
+          tax = (salary / 100) * 20 - 1650000;
+        } else if (32000000 < salary <= 52000000) {
+          tax = (salary / 100) * 25 - 3250000;
+        } else if (52000000 < salary <= 80000000) {
+          tax = (salary / 100) * 30 - 5850000;
+        } else {
+          tax = (salary / 100) * 35 - 9850000;
+        }
+        document.getElementById("result").innerHTML =
+          "Số thuế thu nhập cá nhân của bạn là: " + tax;
+      }
+    </script>
+  </body>
+</html>

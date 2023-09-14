@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="a" placeholder="Nhập độ dài cạnh a" /><br /><br />
+    <input type="number" id="b" placeholder="Nhập độ dài cạnh b" /><br /><br />
+    <input type="number" id="c" placeholder="Nhập độ dài cạnh c" /><br /><br />
+    <input type="button" value="Kiểm tra" onclick="check()" /><br />
+    <br />
+    <span id="result"></span>
+    <script>
+      function check() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+        let x1 = a + b;
+        let x2 = b + c;
+        let x3 = a + c;
+        let result;
+        if (a !== 0 && b !== 0 && c !== 0) {
+          if (x1 > c || x2 > a || x3 > b) {
+            document.getElementById("result").innerHTML =
+              "Đây là 1 hình tam giác";
+          } else {
+            document.getElementById("result").innerHTML =
+              "Đây không phải là 1 hình tam giác";
+          }
+        } else {
+          document.getElementById("result").innerHTML =
+            "Vui lòng nhập giá trị khác 0";
+        }
+      }
+    </script>
+  </body>
+</html>

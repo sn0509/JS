@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hoa hồng của nhân viên</h1>
+    <b>Nhập số tiền bán được</b><br /><br />
+    <input
+      type="number"
+      id="Revenue"
+      placeholder="nhập số tiền VND"
+    /><br /><br />
+    <input type="button" onclick="check()" value="Kiểm tra" /><br /><br />
+    <span id="result"></span>
+    <script>
+      function check() {
+        let revenue = document.getElementById("Revenue").value;
+        let result;
+        if (revenue > 0) {
+          result = (revenue * 5) / 100;
+        } else {
+          result = 0;
+        }
+        document.getElementById("result").innerHTML =
+          "Số tiền hoa hồng của bạn là: " + result + " VND";
+      }
+    </script>
+  </body>
+</html>

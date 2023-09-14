@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="Number" , id="Number" placeholder="Nhập số" />
+    <input type="button" onclick="check()" value="check" />
+    <span id="result"></span>
+    <script>
+      function check() {
+        let number = +document.getElementById("Number").value;
+        if (number % 3 == 0 && number % 5 == 0) {
+          document.getElementById("result").innerHTML =
+            "số " + number + " chia hết cho 3 và 5";
+        } else if (number % 3 == 0) {
+          document.getElementById("result").innerHTML =
+            "số " + number + " chia hết cho 3";
+        } else if (number % 5 == 0) {
+          document.getElementById("result").innerHTML =
+            "số " + number + " chia hết cho 5";
+        }
+      }
+    </script>
+  </body>
+</html>

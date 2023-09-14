@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p><b>Số điện tiêu thụ:</b></p>
+    <input type="number" placeholder="Nhập số điện tiêu thụ" id="powernumber" />
+      <input type="button" value="Kiểm tra" onclick="check()" /><br /><br />
+      <span id="result"></span>
+      <script>
+        function check() {
+          let innumber= document.getElementById('powernumber').value
+          if (innumber > 0) {
+            if (innumber <= 50) {
+              result= innumber * 1678;
+            } else if(innumber <= 100) {
+              result= 83900 + (innumber - 50) * 1734;
+            } else if (innumber <= 200) {
+              result= 170600 + (innumber - 100) * 2014;
+            } else if (innumber <= 300) {
+              result= 372000 + (innumber -100) * 2536;
+            } else if (innumber)
+          }
+        }
+      </script>
+    </p>
+  </body>
+</html>

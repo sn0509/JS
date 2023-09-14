@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="Age" placeholder="Nhập tuổi của bạn" />
+    <button onclick="Check()">Check</button>
+    <p id="result"></p>
+    <script>
+      function Check() {
+        let age = document.getElementById("Age").value;
+        if (age >= 15 && age <= 18) {
+          document.getElementById("result").innerHTML =
+            "Bạn đủ điều kiện vào lớp 10";
+        } else {
+          document.getElementById("result").innerHTML =
+            "Bạn không đủ điều kiện";
+        }
+      }
+    </script>
+  </body>
+</html>

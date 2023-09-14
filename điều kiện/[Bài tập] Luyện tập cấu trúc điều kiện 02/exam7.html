@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <b>
+      nhập các tham số của phương trình ax<sup>2</sup> + bx + c = 0 (a khác
+      0)</b
+    ><br /><br />
+    <input type="number" id="a" placeholder="Nhập số a" /><br /><br />
+    <input type="number" id="b" placeholder="Nhập số b" /><br /><br />
+    <input type="number" id="c" placeholder="Nhập số c" /><br /><br />
+    <button onclick="check();">Check</button>
+    <span id="result"></span>
+    <script>
+      function check() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+        let delta = Math.pow(b, 2) - 4 * a * c;
+        let x = -b / (2 * a);
+        let x1 = (-b - Math.sqrt(delta)) / (2 * a);
+        let x2 = (-b + Math.sqrt(delta)) / (2 * a);
+        let result;
+        if (a === 0) {
+          document.getElementById("result").innerHTML =
+            "Hệ số bậc cao (a) phải khác 0";
+        } else if (delta < 0) {
+          document.getElementById("result").innerHTML =
+            "Phương trình vô nghiệm";
+        } else if (delta === 0) {
+          document.getElementById("result").innerHTML =
+            "Phương trình có nghiệm kép là: x1 = x2 = " + x;
+        } else {
+          document.getElementById("result").innerHTML =
+            "Phương trình có 2 nghiệm: x1= " + x1 + "," + " x2= " + x2;
+        }
+      }
+    </script>
+  </body>
+</html>

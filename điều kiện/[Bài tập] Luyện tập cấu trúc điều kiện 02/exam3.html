@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diện tích hình vuông</title>
+  </head>
+  <body>
+    <input type="number" id="a" placeholder="Nhập kích thước cạnh a" />
+    <button id="S" onclick="tinhS();">Check</button><br />
+    <span id="result"></span>
+    <script>
+      function tinhS() {
+        let input = document.getElementById("a").value;
+        let S = input * input;
+        let result;
+        document.getElementById("result").innerHTML =
+          "Diện tích hình vuông là: " + S;
+      }
+    </script>
+  </body>
+</html>

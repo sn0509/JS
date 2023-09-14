@@ -1,0 +1,25 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diện tích hình chữ nhật</title>
+  </head>
+  <body>
+    <b>Độ dài cạnh a:</b><br />
+    <input type="number" id="a" placeholder="Nhập cạnh a" /><br /><br />
+    <b>Độ dài cạnh b:</b><br />
+    <input type="number" id="b" placeholder="Nhập cạnh b" /><br /><br />
+    <button onclick="tinhS();">Check</button><br /><br />
+    <span id="result"></span>
+    <script>
+      function tinhS() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        let S = (1 / 2) * a * b;
+        document.getElementById("result").innerHTML =
+          "Diện tích hình tam giác vuông là: " + S;
+      }
+    </script>
+  </body>
+</html>

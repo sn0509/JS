@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <b>Số tiền gửi tiết kiệm</b><br /><br />
+    <input
+      type="number"
+      placeholder="Nhập số tiền muốn gửi"
+      id="money"
+    /><br /><br />
+    <b>Số năm gửi</b><br /><br />
+    <input
+      type="number"
+      placeholder="Nhập số năm gửi"
+      id="year"
+    /><br /><br />
+    <b>Lãi suất hàng tháng</b><br /><br />
+    <input
+      type="number"
+      placeholder="Tỉ lệ lãi hàng tháng"
+      id="interest rate"
+    /><br /><br />   
+     <b>Số lần tiền lãi được nhập gốc mỗi năm</b><br></br>
+    <input type="number" placeholder="Nhập số lần nhập gốc mỗi năm" id="many"><br><br>
+    <input type="button" value="Kiểm tra" onclick="check()" /><br /><br />
+    <span id="result"></span>
+    <script>
+      function check() {
+        let P = +document.getElementById("money").value;
+        let t = +document.getElementById("year").value;
+        let r = +document.getElementById("interest rate").value;
+        let n = +document.getElementById('many').value;
+        let result;
+        if (P > 0 && t > 0 && r > 0 && n > 0) {
+          result = P * Math.pow((1 + ( r / 100 ) / n ),( n * t )) ;
+        } else {
+          result = "Giá trị không hợp lệ";
+        }
+        document.getElementById("result").innerHTML =
+          "Số tiền lãi của bạn là: " + result + " đồng";
+      } Math.pow
+    </script>
+  </body>
+</html>

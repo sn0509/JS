@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuyển đổi nhiệt độ</title>
+  </head>
+  <body>
+    <input type="number" id="number" placeholder="Nhập số" />
+    <select id="from">
+      <option value="m">m</option>
+      <option value="ft">ft</option>
+    </select>
+    <select id="to">
+      <option value="ft">ft</option>
+      <option value="m">m</option>
+    </select>
+    <button onclick="convertThis()">Convert</button> <br />
+    <span id="result"></span>
+    <script>
+      function convertThis() {
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let input = document.getElementById("number").value;
+        let result;
+        if (from == "m" && to == "ft") {
+          result = input * 3.2808;
+        } else if (from == "ft" && to == "m") {
+          result = input / 3.2808;
+        } else {
+          result = input;
+        }
+        document.getElementById("result").innerHTML =
+          "Kết quả là:" + result + " " + to;
+      }
+    </script>
+  </body>
+</html>

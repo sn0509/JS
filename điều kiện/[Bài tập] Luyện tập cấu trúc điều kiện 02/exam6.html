@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <b> nhập các tham số của phương trình ax+ b = 0</b><br /><br />
+    <input id="a" placeholder="Nhập số a" type="number" />
+    <input id="b" placeholder="Nhập số b" type="number" />
+    <button onclick="Check();">Check</button><br /><br />
+    <span id="result"></span>
+    <script>
+      function Check() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        let x = -b / a;
+        let resultl;
+        if (a != 0 && b != 0) {
+          document.getElementById("result").innerHTML =
+            "Phương trình có nghiệm là: " + x;
+        } else if (a == null || b == null) {
+          document.getElementById("result").innerHTML = "Số không hợp lệ";
+        } else {
+          document.getElementById("result").innerHTML =
+            "Phương trình vô nghiệm";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -42,7 +42,7 @@
         let result;
         if (from === "VND" && to === "USD") {
           result = Amount / 23000;
-        } else if (from === "USD" && to === "VND") {
+        } else if (from == "USD" && to == "VND") {
           result = Amount * 23000;
         } else {
           result = +Amount;
