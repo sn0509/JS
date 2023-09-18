@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>multiplication table</title>
+  </head>
+  <body>
+    <span id="result"></span>
+    <script>
+      //   let i, j, table;
+      //   table = '<table width="400" border="1" cellspacing="0" cellpading="3">';
+      //   for (i = 1; i <= 10; i++) {
+      //     table = table + "<tr>";
+      //     for (j = 1; j <= 10; j++) {
+      //       table = table + "td";
+      //       +i * j + "<td>";
+      //     }
+      //     table = table + "</tr>";
+      //   }
+      //   table = table + "</table>";
+      //   document.write(i * j);
+
+      let sout = "";
+      let i, j;
+      sout = "<table border='1' width='300' cellspacing='0' cellpadding='15'>";
+      //   debugger;
+      for (i = 1; i <= 10; i++) {
+        sout += "<tr>";
+
+        for (j = 1; j <= 10; j++) {
+          sout += "<td>" + j + "*" + i + "=" + i * j + "</td>";
+        }
+
+        sout += "</tr>";
+        // j = 1;
+      }
+      sout += "</table>";
+
+      document.getElementById("result").innerHTML = sout;
+      //   document.write(sout);
+    </script>
+  </body>
+</html>

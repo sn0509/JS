@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Result <span id="resultTotal"></span> <br />
+    <span id="text"></span>
+    <script>
+      let number = parseInt(
+        prompt("Nhập số lượng số fibonaccy bạn cần hiện: ")
+      );
+      let thisValue = 0;
+      let nextValue = 1;
+      let sum = 0;
+      let result, totalSum;
+      let text = "";
+      for (i = 1; i <= number; i++) {
+        result = parseInt(thisValue + nextValue);
+        thisValue = parseInt(nextValue);
+        nextValue = parseInt(result);
+        sum += parseInt(thisValue);
+        text += thisValue + " + ";
+        console.log("sum = " + sum);
+      }
+      document.getElementById("text").innerHTML =
+        `Tổng ${number} số fibonaccy đầu tiên là:` +
+        sum +
+        " = " +
+        text.slice(0, text.length - 3);
+    </script>
+  </body>
+</html>

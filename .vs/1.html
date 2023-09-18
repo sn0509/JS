@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <input type="number" placeholder="nhập số" id="number" /> -->
+    <!-- <button onclick="daySoNgTo(n)">Click</button> -->
+    <script>
+      function daySoNgTo(n) {
+        let n = document.getElementById("number").value;
+        let i = 2;
+        let j = 1;
+        while (j <= n) {
+          if (kiemtrasonguyenTo(i)) {
+            console.log(i);
+            j++;
+          }
+          i++;
+        }
+      }
+
+      function kiemtrasonguyenTo(a) {
+        if (a < 2) {
+          return false;
+        }
+        let squareRoot = Math.sqrt(a);
+        for (let i = 2; i <= squareRoot; i++) {
+          if (a % i == 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

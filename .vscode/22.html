@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="nhập số" id="So">
+    <input type="button" onclick="check()">
+    <span id="result"></span>
+    <script>
+        function check() {
+            let number= +document.getElementById('So').value;
+            let result;
+            if (number % 3 ==0) {
+                if (number % 5 ==0) {
+                    result="chia hết cho 3 và 5";
+                } else { 
+                    result= "chia hết cho 3"
+                }
+            } else (number % 5==0) {
+                
+            }
+        }
+    </script>
+</body>
+</html>

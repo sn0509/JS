@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Số nguyên tố:</h1>
+    <span id="result"></span>
+    <script>
+      let input = parseInt(prompt("Lấy n số nguyên tố (1-20)"));
+      let resultCount = 0;
+      let result = "";
+      let countSNT = 0;
+      const max = 71;
+      if (input <= 20) {
+        for (let i = 1; i <= max; i++) {
+          countSNT = 0;
+          for (j = 1; j <= i; j++) {
+            if (i % j == 0) {
+              countSNT += 1;
+            }
+          }
+          if (countSNT == 2) {
+            resultCount += 1;
+            result += i + " , ";
+          }
+          if (resultCount == input) {
+            break;
+          }
+        }
+        result = result.substring(0, result.length - 3);
+        document.getElementById("result").innerHTML =
+          "Co " + resultCount + " SNT bao gom " + result;
+      } else {
+        alert("Chỉ lấy tối đa 20 SNT đầu tiên");
+      }
+    </script>
+  </body>
+</html>

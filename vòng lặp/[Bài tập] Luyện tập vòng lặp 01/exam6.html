@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Các số chia hết cho 7 gồm:</h1>
+    <script>
+      let a = 7;
+      let result = 0;
+      let total = 0;
+      let sum;
+      let number = parseInt(prompt("Nhập số lượng số cần tính: "));
+      for (i = 0; i <= number; i++) {
+        document.write(result + "+");
+        result += a;
+        sum = total;
+        total += result;
+      }
+      document.write("=" + sum);
+    </script>
+  </body>
+</html>
