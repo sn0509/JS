@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let text = "Nhập số ";
+      let numberArray = [];
+      let result = 0;
+      while (text != "q" && text != "") {
+        text = prompt("nhập số để thêm vào chuỗi và nhập q để kết thúc!");
+        if (text !== "q" && text !== "") {
+          alert(text + " đã được thêm vào chuỗi");
+          numberArray.push(text);
+        } else {
+          alert("Kết thúc việc nhập số");
+        }
+        console.log(numberArray);
+      }
+      document.write(numberArray);
+      document.write("<br>");
+      let resultAm = "";
+      //   for (i = 0; i < number.length; i++) {
+      //     let thisVal = parseInt(number[i]);
+      //     if (thisVal < 0) {
+      //       resultAm += thisVal + " ";
+      //     }
+      //   }
+
+      //   document.write(resultAm);
+      let newArrReverse = numberArray.reverse();
+      document.write(newArrReverse);
+    </script>
+  </body>
+</html>

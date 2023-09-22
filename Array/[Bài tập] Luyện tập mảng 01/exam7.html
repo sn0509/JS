@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Enter the number:</p>
+    <input type="number" placeholder="Number" id="num" />
+    <button onclick="check()">Check</button>
+    <br /><br />
+    <span id="result"></span>
+    <script>
+      const numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let result = "";
+      function check() {
+        let numberInput = parseInt(document.getElementById("num").value);
+
+        for (i = 0; i < numberArray.length - 1; i++) {
+          if (numberArray[i] == numberInput) {
+            numberArray.splice(i, 1);
+            numberArray.push(0);
+            i -= 1;
+          } else {
+            result += "Number " + numberInput + " is not found";
+          }
+        }
+        document.getElementById("result").innerHTML = numberArray;
+      }
+    </script>
+  </body>
+</html>

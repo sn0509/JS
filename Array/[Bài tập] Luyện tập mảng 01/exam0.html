@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getMaxValueFromArray(array) {
+        let max = array[0];
+        let index = 0;
+        for (i = 1; i < array.length; i++) {
+          if (array[i] > max) {
+            max = array[i];
+            index = i;
+          }
+        }
+        return max;
+      }
+
+      function getMaxIndexFromArray(array) {
+        let max = array[0];
+        let index = 0;
+        for (i = 1; i < array.length; i++) {
+          if (array[i] > max) {
+            max = array[i];
+            index = i;
+          }
+        }
+        return index;
+      }
+      let array1 = [44, 55, 111, 22, 3, 6];
+      let arraySort = array1.sort((a, b) => b - a);
+ 
+      let max2 = arraySort[0];
+      let max = getMaxValueFromArray(array1);
+      let index = getMaxIndexFromArray(array1);
+      console.log(max);
+      console.log(index);
+      console.log(max2);
+      console.log(array1);
+      console.log(arraySort);
+    </script>
+  </body>
+</html>

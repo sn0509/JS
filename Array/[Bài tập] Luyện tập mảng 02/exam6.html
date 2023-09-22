@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <b>Mảng a: </b>
+    <input type="text" placeholder="Nhập giá trị" id="input1" />
+    <button id="add1" onclick="array1()">Add</button>
+    <button onclick="change()">Change' - ' to ' _ '</button><br /><br />
+    <span id="result1"></span><br /><br />
+    <span id="result2"></span>
+    <script>
+      let changeto = "_";
+      let arrayA = [];
+      function array1() {
+        let text1 = document.getElementById("input1").value;
+        arrayA.push(text1);
+        let newarray = arrayA.join("-");
+        document.getElementById("result1").innerHTML =
+          "Mảng gồm các phần tử: " + newarray;
+      }
+      function change() {
+        let newarray2 = arrayA.join("_");
+        document.getElementById("result2").innerHTML =
+          "Mảng sau khi thay đổi:" + newarray2;
+      }
+    </script>
+  </body>
+</html>

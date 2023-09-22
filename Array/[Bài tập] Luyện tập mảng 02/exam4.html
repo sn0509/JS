@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let text = "Hello";
+      let count = 0;
+      let array = [];
+      while (text != "") {
+        text = prompt("Thêm phần tử vào mảng");
+        array.push(text);
+        if (typeof text == "") {
+          count += 1;
+        }
+      }
+      document.write(array + "<br>");
+      document.write("Trong mảng có " + count + " từ");
+    </script>
+  </body>
+</html>

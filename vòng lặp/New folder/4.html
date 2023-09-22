@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p><b>Nhập chiều dài hình chữ nhật:</b></p>
+    <input type="number" id="length" placeholder="chiều dài" /><br />
+    <p><b>Nhập chiều rộng hình chữ nhật:</b></p>
+    <input type="number" id="width" placeholder="chiều rộng" /><br />
+    <br />
+    <input type="button" value="Display" onclick="retangle()" /><br /><br />
+    <script>
+      function retangle() {
+        let a, b;
+        a = document.getElementById("length").value;
+        b = document.getElementById("width").value;
+        for (i = 0; i < b; i++) {
+          for (j = 0; j < a; j++) {
+            if (i == 0 || j == 0 || i == b - 1 || j == a - 1) {
+              document.write("&nbsp;*");
+            } else {
+              document.write("&nbsp;&nbsp;&nbsp;");
+            }
+          }
+          document.write("<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

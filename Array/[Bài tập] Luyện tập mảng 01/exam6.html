@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Enter the number to check</p>
+    <input id="number" type="number" placeholder="Nhập số" /><br /><br />
+    <input type="button" onclick="check()" value="Check" />
+    <span id="result"></span>
+    <script>
+      let numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let result;
+      function check() {
+        let numberInput = document.getElementById("number").value;
+        for (i = 0; i < numberArray.length; i++) {
+          if (numberInput == numberArray[i]) {
+            result = "Number " + numberInput + " has in array";
+            break;
+          } else {
+            result = "Number " + numberInput + " is not in array";
+          }
+        }
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

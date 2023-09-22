@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arrLenInput = prompt("Kích thước mảng");
+      let arrInput = [];
+      let arrNum = [];
+      let count = 0;
+      for (let i = 0; i < arrLenInput; i++) {
+        let inputVal = prompt("Nhập phần tử thứ " + (i + 1));
+        arrInput[i] = inputVal;
+      }
+      for (let i = 0; i < arrInput.length; i++) {
+        if (isNumber(arrInput[i])) {
+          count += 1;
+          arrNum.push(arrInput[i]);
+        }
+      }
+      document.write("Mảng nhập là " + arrInput.join(",") + "<br/>");
+      document.write("Có " + count + " ký tự số là " + arrNum.join(","));
+
+      function isNumber(value) {
+        return !isNaN(parseFloat(value)) && isFinite(value);
+      }
+    </script>
+  </body>
+</html>

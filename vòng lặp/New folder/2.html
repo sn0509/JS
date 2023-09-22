@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="inputNumber" placeholder="Nhập số" />
+    <input type="button" value="Check" onclick="ktSond()" /><br /><br />
+    <div id="result"></div>
+    <script>
+      let result = "";
+      function ktSond() {
+        let number = +document.getElementById("inputNumber").value;
+        let giaithua = 1;
+        for (i = 1; i <= number; i++) {
+          giaithua *= i;
+          result += i + " * ";
+        }
+        result = result.slice(0, result.length - 2);
+
+        document.getElementById("result").innerHTML =
+          "Giai thừa của  " + number + "! = " + giaithua + " = " + result;
+      }
+    </script>
+  </body>
+</html>

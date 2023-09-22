@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <b>Số tiền gốc:</b><br />
+    <input type="number" id="amount" placeholder="Nhập số tiền" /><br /><br />
+    <b>Thời gian vay:</b><br />
+    <input type="number" id="time" placeholder="thời gian(tháng)" /><br /><br />
+    <b>Lãi suất hàng tháng (%):</b><br />
+    <input type="number" id="percent" placeholder="(%)" /><br /><br />
+    <input type="button" value="Kiểm tra" onclick="interest()" /><br /><br />
+    <span id="result">Result</span>
+    <script>
+      let r = +document.getElementById("percent").value / 100;
+      let P = +document.getElementById("amount").value;
+      let t = +document.getElementById("time").value;
+      let M;
+      function sogocphaitraMonth() {
+        M = P / t;
+      }
+      function sogocconlai() {
+        sogoccon = P - M;
+      }
+      function tienlaihangthang() {
+        x = (sogoccon * r) / t;
+      }
+      function tienlaitrahangthang() {
+        c = M + x;
+      }
+    </script>
+  </body>
+</html>

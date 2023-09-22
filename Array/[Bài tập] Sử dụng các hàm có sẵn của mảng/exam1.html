@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <b>myColor: ["Red","Green","White",Black]</b><br /><br />
+    <input type="button" value="-" onclick="change1()" />
+    <input type="button" value=" +" onclick="change2()" />
+    <input type="button" value="bassic" onclick="change3()" /><br /><br />
+    <span id="result"></span>
+    <script>
+      let myColor = ["Red", "Green", "White", "Black"];
+      function change1() {
+        document.getElementById("result").innerHTML = myColor.join("-");
+      }
+      function change2() {
+        document.getElementById("result").innerHTML = myColor.join("+");
+      }
+      function change3() {
+        document.getElementById("result").innerHTML = myColor.toString();
+      }
+    </script>
+  </body>
+</html>
